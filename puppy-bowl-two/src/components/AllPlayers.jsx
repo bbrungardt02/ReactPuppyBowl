@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { fetchPlayers } from "../ajaxHelpers/puppies";
 
 export default function AllPlayers() {
-  const [thePlayers, setThePlayers] = useState([]);
+  const navigate = useNavigate();
+  const [players, setPlayers] = useState([]);
 
   useEffect(() => {
     async function getPlayers() {
-      const players = await fetchPlayers();
-      setThePlayers(players);
+      const playersList = await fetchPlayers();
+      setPlayers(playersList.data.players);
     }
     getPlayers();
   }, []);
 
   return (
     <div>
-      {theplayers.map((player) => {
+      {players.map((player) => {
         return (
-          <div>
-            <h4>{player.name}</h4>
+          <div key={player.id}>
+            <h4 onClick={() => navigate(`/${player.id}`)}>{player.name}</h4>
           </div>
         );
       })}

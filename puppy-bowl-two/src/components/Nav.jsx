@@ -6,7 +6,6 @@ export default function Nav() {
     <div>
       <Link to="/">AllPlayers</Link>
       <Link to="/NewPlayerForm">NewPlayerForm</Link>
-      <Link to="/SinglePlayer">SinglePlayer</Link>
     </div>
   );
 }
