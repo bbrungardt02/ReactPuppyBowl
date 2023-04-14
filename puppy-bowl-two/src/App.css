@@ -1,42 +1,83 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  font-family: monospace;
+  text-transform: uppercase;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#allPlayers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.nav {
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.singlePlayerCard {
+  background-color: rgb(112, 184, 247);
+  flex-basis: 200px;
+  flex-grow: 1;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+.singlePlayerCard img,
+.singlePlayerView img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0px;
 }
 
-.read-the-docs {
-  color: #888;
+.playerTitle {
+  color: gold;
+  font-size: x-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.playerBreed {
+  color: blue;
+  font-weight: bold;
+  font-size: large;
+}
+
+.playerNumber {
+  color: blue;
+  font-weight: bold;
+  font-size: large;
+}
+
+.playerStatus {
+  color: blue;
+  font-weight: bold;
+  font-size: large;
+}
+
+.singlePlayerView {
+  flex-basis: 500px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.singlePlayerView > li {
+  margin: 10px 0px 0px 0px;
+}
+
+button {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+label {
+  font-size: large;
+  font-weight: bold;
 }

@@ -21,7 +21,7 @@ export async function fetchSinglePlayer(id) {
   }
 }
 
-export async function postPlayer(name, email) {
+export async function postPlayer(name, breed) {
   try {
     const response = await fetch(baseUrl, {
       method: "POST",
@@ -30,7 +30,7 @@ export async function postPlayer(name, email) {
       },
       body: JSON.stringify({
         name,
-        email,
+        breed,
       }),
     });
     const createdPlayer = await response.json();
@@ -39,3 +39,19 @@ export async function postPlayer(name, email) {
     console.error(error);
   }
 }
+
+export const removePlayer = async (id) => {
+  try {
+    const response = await fetch(`${baseUrl}/${id}`, {
+      method: "DELETE",
+    });
+    const result = await response.json();
+    if (result.error) throw result.error;
+    return;
+  } catch (err) {
+    console.error(
+      `Whoops, trouble removing player #${id} from the roster!`,
+      err
+    );
+  }
+};

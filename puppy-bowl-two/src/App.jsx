@@ -13,7 +13,11 @@ function App() {
       <Routes>
         <Route path="/" element={<AllPlayers />} />
         <Route path="/:playerId" element={<SinglePlayer />} />
-        <Route path="/NewPlayerForm" element={<NewPlayerForm />} />
+        <Route
+          className="newPlayerForm"
+          path="/NewPlayerForm"
+          element={<NewPlayerForm />}
+        />
       </Routes>
       <Footer />
     </div>

@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 export default function Nav() {
   return (
     <div>
-      <Link to="/">AllPlayers</Link>
-      <Link to="/NewPlayerForm">NewPlayerForm</Link>
+      <Link className="nav" to="/">
+        AllPlayers
+      </Link>
+      <Link className="nav" to="/NewPlayerForm">
+        New Player Form
+      </Link>
     </div>
   );
 }

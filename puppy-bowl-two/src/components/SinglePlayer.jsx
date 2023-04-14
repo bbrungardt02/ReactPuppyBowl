@@ -17,12 +17,14 @@ export default function SinglePlayer() {
   console.log("Player: ", player);
 
   return (
-    <div>
+    <div className="singlePlayerView">
       {player && (
         <ul>
-          <li>Name: {player.data.player.name}</li>
-          <li>Breed: {player.data.player.breed}</li>
-          <li>Status: {player.data.player.status}</li>
+          <li className="playerTitle">Name: {player.data.player.name}</li>
+          <li className="playerNumber">#{player.data.player.id}</li>
+          <li className="playerBreed">Breed: {player.data.player.breed}</li>
+          <li className="playerStatus">Status: {player.data.player.status}</li>
+          <img className="playerPhoto" src={player.data.player.imageUrl}></img>
         </ul>
       )}
     </div>
