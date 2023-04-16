@@ -30,6 +30,7 @@ export default function AllPlayers() {
             <p className="playerStatus">Status: {player.status}</p>
             <img className="playerPhoto" src={player.imageUrl}></img>
             <h1
+              id="deleteButton"
               onClick={async () => {
                 await removePlayer(id);
                 const response = await fetchPlayers();

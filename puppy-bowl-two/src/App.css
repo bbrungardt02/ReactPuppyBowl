@@ -39,6 +39,14 @@
   text-transform: uppercase;
 }
 
+.playerTitle:hover {
+  background-color: cornflowerblue;
+}
+
+#deleteButton:hover {
+  background-color: aquamarine;
+}
+
 .playerBreed {
   color: blue;
   font-weight: bold;
