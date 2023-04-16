@@ -1,3 +1,5 @@
+import AllPlayers from "../components/AllPlayers";
+
 const baseUrl =
   "https://fsa-puppy-bowl.herokuapp.com/api/2301-ftb-et-web-am/players";
 
